@@ -112,46 +112,46 @@ while distance_vector-distance > 0.01 and i<1000:
         print("Values exceding the 360 degrees limit")
         break 
 
-# fig, axs = plt.subplots(nrows=3,ncols=2, figsize=(20,20))
-# fig.canvas.set_window_title('Velocity Kinematics Data')
-# axs[0, 0].grid(), axs[0, 1].grid()
-# axs[1, 0].grid(), axs[1, 1].grid()
-# axs[2, 0].grid(), axs[2, 1].grid()
+fig, axs = plt.subplots(nrows=3,ncols=2, figsize=(20,20))
+fig.canvas.set_window_title('Velocity Kinematics Data')
+axs[0, 0].grid(), axs[0, 1].grid()
+axs[1, 0].grid(), axs[1, 1].grid()
+axs[2, 0].grid(), axs[2, 1].grid()
 
-# # Plot end effector path
-# limits = [-(l1+l2+0.1), (l1+l2+0.1), -(l1+l2+0.1), (l1+l2+0.1)]   # Define x and y plotting limits
-# axs[0, 0].axis(limits)
-# axs[0, 0].plot(x_list, y_list, 'g.', markersize=1)
-# axs[0, 0].plot(xi, yi, 'r+', markersize=20)
-# axs[0, 0].plot(xf, yf, 'b+', markersize=20)
-# axs[0, 0].set_title("End effector path")
+# Plot end effector path
+limits = [-(l1+l2+0.1), (l1+l2+0.1), -(l1+l2+0.1), (l1+l2+0.1)]   # Define x and y plotting limits
+axs[0, 0].axis(limits)
+axs[0, 0].plot(x_list, y_list, 'g.', markersize=1)
+axs[0, 0].plot(xi, yi, 'r+', markersize=20)
+axs[0, 0].plot(xf, yf, 'b+', markersize=20)
+axs[0, 0].set_title("End effector path")
 
-# # Plot distance values
-# axs[0, 1].plot(distance_list)
-# axs[0, 1].set_title("Distance travelled by end effector")
+# Plot distance values
+axs[0, 1].plot(distance_list)
+axs[0, 1].set_title("Distance travelled by end effector")
 
-# # Plot theta1_dot values
-# axs[1, 0].plot(omega1_list)
-# axs[1, 0].set_title("Omega1 values")
+# Plot theta1_dot values
+axs[1, 0].plot(omega1_list)
+axs[1, 0].set_title("Omega1 values")
 
-# # Plot theta2_dot values
-# axs[1, 1].plot(omega2_list)
-# axs[1, 1].set_title("Omega2 values")
+# Plot theta2_dot values
+axs[1, 1].plot(omega2_list)
+axs[1, 1].set_title("Omega2 values")
 
-# # Plot theta1 values
-# axs[2, 0].plot(theta1_list)
-# axs[2, 0].set_title("Theta1 values")
+# Plot theta1 values
+axs[2, 0].plot(theta1_list)
+axs[2, 0].set_title("Theta1 values")
 
-# # Plot theta2 values
-# axs[2, 1].plot(theta2_list)
-# axs[2, 1].set_title("Theta2 values")
+# Plot theta2 values
+axs[2, 1].plot(theta2_list)
+axs[2, 1].set_title("Theta2 values")
 
-# fig.tight_layout()
-# plt.plot()
-# plt.show()
+fig.tight_layout()
+plt.plot()
+plt.show()
 
 # Call the animate function to animate the motion of the planar arm
-kin.animate(np.radians(theta1_list), np.radians(theta2_list), interval=10)
+# kin.animate(np.radians(theta1_list), np.radians(theta2_list), interval=10)
 
 
 
